@@ -9,14 +9,13 @@ import (
 func main() {
 	c := colly.NewCollector()
 
-	// Find and visit all links
-	c.OnHTML("a[href]", func(e *colly.HTMLElement) {
-		e.Request.Visit(e.Attr("href"))
+	c.OnHTML(".result-row", func(e *colly.HTMLElement) {
+		fmt.Println(e.Attr("data-prof-name"))
 	})
 
 	c.OnRequest(func(r *colly.Request) {
 		fmt.Println("Visiting", r.URL)
 	})
 
-	c.Visit("http://go-colly.org/")
+	c.Visit("https://www.psychologytoday.com/us/therapists?search=austin")
 }
