@@ -1,6 +1,5 @@
+Collection of Colly-utilized scraped sites for project [freud](https://github.com/mehtarit/freud).
 # Maslow
-
-Suite of scrapers to gather mental health data. 
 
 Typical usage:
 
