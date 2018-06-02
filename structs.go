@@ -1,4 +1,4 @@
-package main
+package maslow
 
 // Therapist is a struct representation of a therapist or counselor
 type Therapist struct {
